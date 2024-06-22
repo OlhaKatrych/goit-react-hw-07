@@ -1,0 +1,45 @@
+.containerForm {
+
+    width: 400px;
+    margin-bottom: 20px;
+    
+}
+
+.form {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width:  300px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+.inputLabel {
+
+    display: block;    
+}
+
+.field {
+
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.btnSubmit {
+
+    width: 120px;
+    padding: 7px;
+    margin: 0 auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.error {
+
+    color: red;
+}

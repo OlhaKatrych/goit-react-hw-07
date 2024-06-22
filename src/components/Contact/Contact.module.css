@@ -1,0 +1,29 @@
+.elemContainer {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textNumberContainer {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.symbol {
+
+    margin-right: 10px;
+}
+
+.btnDelete {
+    
+    width: 70px;
+    padding: 7px;
+    border: 2px solid gray;
+    border-radius: 5px;
+
+}
+
