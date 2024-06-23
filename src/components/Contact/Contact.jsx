@@ -2,10 +2,14 @@ import css from "./Contact.module.css";
 import { IoPersonSharp } from "react-icons/io5";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsSlice";
+import { deleteContact } from "../../redux/contactsOps";
 
 function Contact({ data }) {
+  
   const dispatch = useDispatch();
+  const handleDelete = () => {
+    dispatch(deleteContact(data.id));
+  };
   return (
     <div className={css.elemContainer}>
       <div className={css.textNumberContainer}>
@@ -25,7 +29,7 @@ function Contact({ data }) {
       <button
         type="button"
         className={css.btnDelete}
-        onClick={() => dispatch(deleteContact(data.id))}
+        onClick={handleDelete}
       >
         Delete
       </button>

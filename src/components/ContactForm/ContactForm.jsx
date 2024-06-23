@@ -3,7 +3,7 @@ import css from "./ContactForm.module.css";
 import * as Yup from "yup";
 import { ErrorMessage } from "formik";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsSlice";
+import { addContact } from "../../redux/contactsOps";
 
 const contactSchema = Yup.object().shape({
   name: Yup.string()
@@ -21,8 +21,7 @@ function ContactForm() {
   const dispatch = useDispatch();
 
   function handleSubmit(value, action) {
-    const { name, number } = value;
-    dispatch(addContact(name, number));
+    dispatch(addContact(value));
     action.resetForm();
   }
   return (
